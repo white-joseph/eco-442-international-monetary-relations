@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb, graphicx, multicol, array, enumerate, textcomp}
+
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]
+\leavevmode\par
+}{\end{trivlist}}
+
+\begin{document}
+ 
+\title{Problem Set 1}
+\author{Joe White\\
+ECO 442}
+\maketitle
+ 
+\begin{problem}{1}
+\begin{enumerate}[(a)]
+	\item $E_{\$/\text{mali}} = 56.2$, then
+	\[
+	E_{\text{mali}/\$}(\$200{,}000)
+	= \left(\frac{1}{56.2}\right)(\$200{,}000)
+	= 3{,}558.72\ \text{mali}.
+	\]
+
+	\item $F_{\$/\text{mali}} = 58.4$, then
+	\[
+	F_{\text{mali}/\$}(\$50{,}000) + E_{\text{mali}/\$}(\$150{,}000)
+	= \left(\frac{1}{58.4}\right)(\$50{,}000)
+	+ \left(\frac{1}{56.2}\right)(\$150{,}000)
+	= 3{,}525.20\ \text{mali}.
+	\]
+
+	\item Call option with strike $K = 52.8$. Since
+	\[
+	E_{\$/\text{mali}} = 56.2 > K = 52.8,
+	\]
+	we don't use the option all dollars are purchased at the spot rate:
+	\[
+	\text{mali needed}
+	= E_{\text{mali}/\$}(\$200{,}000)
+	= \left(\frac{1}{56.2}\right)(\$200{,}000)
+	= 3{,}558.72\ \text{mali}.
+	\]
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{2}
+
+Given:
+\[
+E_{\text{yen}/\$}=95,\qquad E_{\text{peso}/\$}=3.2.
+\]
+Then
+\[
+E_{\text{\textyen}/\text{peso}}=(E_{\text{\textyen}/\$})(E_{\$/\text{peso}})
+= (95)(\frac{1}{3.2}) = 29.6875
+\]
+
+\end{problem}
+
+\begin{problem}{3}
+
+Given:
+\[
+S_{\$/\pounds} = 1.95, \qquad
+F_{\$/\pounds} = 1.90, \qquad
+S_{\$/\pounds}^{3\text{mo}} = 1.92,
+\]
+with a contract size of \pounds 1{,}000{,}000.
+
+\begin{enumerate}[(a)]
+	\item Since the expected future spot rate exceeds the forward rate,
+	\[
+	S_{\$/\pounds}^{3\text{mo}} > F_{\$/\pounds},
+	\]
+	the investor should take a long position in pounds (buy pounds forward).
+
+	\item Expected profit from the forward position is
+	\[
+	\Pi
+	= \bigl(S_{\$/\pounds}^{3\text{mo}} - F_{\$/\pounds}\bigr)(\pounds 1{,}000{,}000)
+	= (1.92 - 1.90)(1{,}000{,}000)
+	= \$20{,}000.
+	\]
+
+	\item If the realized future spot rate is $S_{\$/\pounds}^{3\text{mo}} = 1.86$, profit is
+	\[
+	\Pi
+	= \bigl(S_{\$/\pounds}^{3\text{mo}} - F_{\$/\pounds}\bigr)(\pounds 1{,}000{,}000)
+	= (1.86 - 1.90)(1{,}000{,}000)
+	= -\$40{,}000.
+	\]
+\end{enumerate}
+
+\end{problem}
+
+
+\begin{problem}{4}
+
+Given bid--ask spot rates for dollars per yen:
+\[
+S_{\$/\text{jpy}}^{\text{bid}} = 0.080, \qquad
+S_{\$/\text{jpy}}^{\text{ask}} = 0.085.
+\]
+
+\begin{enumerate}[(a)]
+	\item A Japanese exporter converting \$50{,}000 into yen must buy yen at the ask rate:
+	\[
+	= \frac{\$50{,}000}{0.085}
+	= 588{,}235.29\ \text{yen}.
+	\]
+
+	\item A U.S. firm that must immediately pay 100{,}000 yen also buys yen at the ask rate:
+	\[
+	= (0.085)(100{,}000)
+	= \$8{,}500.
+	\]
+\end{enumerate}
+
+\end{problem}
+
+\end{document}
