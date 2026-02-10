@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb, graphicx, multicol, array, enumerate, textcomp}
+
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]
+\leavevmode\par
+}{\end{trivlist}}
+
+\begin{document}
+
+\title{Problem Set 2}
+\author{Joe White\\ECO 442}
+\maketitle
+
+%--------------------------------------------------
+\begin{problem}{1}
+
+\[
+i_{\$} = 0.04, \qquad i_{\text{\texteuro}} = 0.035,
+\]
+\[
+E_{\text{\texteuro}/\$} = 1.01, \qquad F_{\text{\texteuro}/\$} = 0.99.
+\]
+
+\begin{enumerate}[(a)]
+\item Covered interest rate parity means:
+\[
+(1+i_{\$})
+= (1+i_{\text{\texteuro}})
+\left(\frac{F_{\text{\texteuro}/\$}}{E_{\text{\texteuro}/\$}}\right).
+\]
+
+Then:
+\[
+1+i_{\$} = 1.04,
+\]
+\[
+(1+i_{\text{\texteuro}})
+\left(\frac{0.99}{1.01}\right)
+\approx 1.014.
+\]
+
+Since $1.04 \neq 1.014$, covered interest rate parity is not holding.
+
+\item Uncovered interest rate parity means:
+\[
+(1+i_{\$})
+= (1+i_{\text{\texteuro}})
+\left(\frac{E^{1\text{yr}}_{\text{\texteuro}/\$}}{E_{\text{\texteuro}/\$}}\right).
+\]
+
+Because we don't know the expected future spot rate, uncovered interest rate parity is uncertain.
+
+\item Since the covered return is higher in the United States, the treasurer should invest in the United States
+\end{enumerate}
+
+\end{problem}
+
+%--------------------------------------------------
+\begin{problem}{2}
+
+\[
+E_{\$/\pounds} = 1.50, \qquad F_{\$/\pounds} = 1.52,
+\]
+\[
+i_{\$} = 0.020, \qquad i_{\pounds} = 0.0145.
+\]
+
+\begin{enumerate}[(a)]
+\item Covered interest rate parity does not hold. Since
+\[
+(1+i_{\pounds})\left(\frac{F_{\$/\pounds}}{E_{\$/\pounds}}\right)
+= (1.0145)\left(\frac{1.52}{1.50}\right)
+\approx 1.028 > 1.020,
+\]a U.S. investor should borrow dollars and invest in pounds.
+
+\item Borrow \$1{,}500{,}000 at 2.0\%:
+\[
+(1.02)(1{,}500{,}000) = \$1{,}530{,}000.
+\]
+
+Convert to pounds at the spot rate:
+\[
+\pounds = \frac{1{,}500{,}000}{1.50} = 1{,}000{,}000.
+\]
+
+Invest in the U.K.:
+\[
+(1.0145)(1{,}000{,}000) = 1{,}014{,}500\ \pounds.
+\]
+
+Convert back to dollars using the forward rate:
+\[
+(1.52)(1{,}014{,}500) = \$1{,}542{,}040.
+\]
+
+Arbitrage profit:
+\[
+\$1{,}542{,}040 - \$1{,}530{,}000
+= \$12{,}040.
+\]
+\end{enumerate}
+
+\end{problem}
+
+%--------------------------------------------------
+\begin{problem}{3}
+
+\[
+i_{\$} = 5.93\%, \qquad i_{\text{lira}} = 70.0\%.
+\]
+
+This is possible in the absence of default risk if the high Turkish interest rate is offset by an
+expected depreciation of the Turkish lira under uncovered interest rate parity. Therefore, the Turkish lira is expected to depreciate against the U.S. dollar over the coming year.
+
+\end{problem}
+
+\end{document}
