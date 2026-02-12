@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,enumerate,booktabs}
+\usepackage{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+\title{Group Assignment 2: Exchange Rate Forecast}
+\author{Logan Rechin, Joe White\\ECO 442}
+\date{}
+\maketitle
+
+\section*{Data}
+
+We analyze the Japanese yen relative to the U.S. dollar and quote the exchange rate as
+\[
+S_0 \equiv E_{\text{JPY}/\$} = \text{yen per 1 U.S. dollar}.
+\]
+
+We use the spot and forward quotes:
+\[
+S_0 = 152.904 \ \text{JPY}/\$.
+\]
+
+The interest rates are annualized government yields with matching maturities in each country (3-month and 1-year):
+
+\begin{itemize}
+  \item U.S.\ 3-month interest rate: $i_{\$}^{3\text{mo}} = 3.69\%$
+  \item Japan 3-month interest rate: $i_{\text{JPY}}^{3\text{mo}} = 0.72\%$
+  \item U.S.\ 1-year interest rate: $i_{\$}^{1\text{yr}} = 3.44\%$
+  \item Japan 1-year interest rate: $i_{\text{JPY}}^{1\text{yr}} = 1.05\%$
+\end{itemize}
+
+\section*{Interest Rate Parity}
+
+Covered interest rate parity:
+\[
+\frac{1+i_{\$}}{1+i_F} = \frac{F^{\$}_{F}}{E^{\$}_{F}}.
+\]
+
+The forward rate is:
+\[
+F^{\text{IRP}}
+=
+S_0\left(\frac{1+i_{\text{JPY}}}{1+i_{\$}}\right).
+\]
+
+Uncovered interest rate parity is:
+\[
+\frac{1+i_{\$}}{1+i_F} = \frac{E^{1\text{yr}}{}^{\$}_{F}}{E^{\$}_{F}}.
+\]
+
+\section*{(1) IRP Forecasts}
+
+\subsection*{3-month implied forward rate}
+\[
+F_{3\text{mo}}^{\text{IRP}}
+=
+152.904\left(\frac{1+0.0072}{1+0.0369}\right)
+=
+148.519\ \text{JPY}/\$ \approx 148.52.
+\]
+
+\subsection*{1-year implied forward rate}
+\[
+F_{1\text{yr}}^{\text{IRP}}
+=
+152.904\left(\frac{1+0.0105}{1+0.0344}\right)
+=
+149.371\ \text{JPY}/\$ \approx 149.37.
+\]
+
+\section*{(2) Market Forward Rates and Comparison}
+
+From the USD/JPY forward-rates from FXEmpire we use:
+\[
+F_{3\text{mo}}^{\text{mkt}} = 151.758, 
+\qquad
+F_{1\text{yr}}^{\text{mkt}} = 148.998.
+\]
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Horizon & IRP forward $F^{\text{IRP}}$ & Market forward $F^{\text{mkt}}$ & Difference \\
+\midrule
+3 months & 148.519 & 151.758 & $-3.239$ \\
+1 year   & 149.371 & 148.998 & $0.373$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Discussion}
+
+Since U.S.\ interest rates exceed Japanese interest rates at both maturities ($i_{\$} > i_{\text{JPY}}$),
+Covered IRP implies that the yen should trade at a forward premium relative to the dollar, which  means the forward rate should be below the spot rate. This is what we observe for the
+1-year forward rate.
+
+Small differences between the IRP-implied forward and observed market forward rates can arise from bid-ask spreads, timing mismatches across sources, and differences in quote/compounding conventions for interest rates and forward contracts.
+
+\section*{Sources}
+
+\begin{itemize}
+\item Spot rate (USD/JPY): Yahoo Finance \\
+\url{https://finance.yahoo.com/quote/JPY%3DX/}
+
+\item U.S.\ 3-month rate: CNBC \\
+\url{https://www.cnbc.com/quotes/US3M}
+
+\item Japan 3-month rate: Investing.com \\
+\url{https://www.investing.com/rates-bonds/japan-3-month-bond-yield}
+
+\item U.S.\ 1-year rate: CNBC \\
+\url{https://www.cnbc.com/quotes/US1Y}
+
+\item Japan 1-year rate: Investing.com \\
+\url{https://www.investing.com/rates-bonds/japan-1-year-bond-yield}
+
+\item Spot and forward rates (Bid/Ask/Mid): FXEmpire \\
+\url{https://www.fxempire.com/currencies/usd-jpy/forward-rates}
+\end{itemize}
+
+\end{document}
