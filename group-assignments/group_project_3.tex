@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,enumerate,booktabs}
+\usepackage{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% --- notation helpers ---
+\newcommand{\usd}{\text{\$}}
+\newcommand{\jpy}{\text{JPY}}
+
+\begin{document}
+
+\title{Group Assignment 3}
+\author{Logan Rechin, Joe White\\ECO 442}
+\date{\today}
+\maketitle
+
+% =========================================================
+% Part 1: Law of One Price
+% =========================================================
+\section*{Part 1: Law of One Price}
+
+\subsection*{Data}
+Sausage Egg McMuffin Meal (Japan): $P_{\text{JP}} = \yen 530$\\
+Sausage Egg McMuffin Meal (Oxford, OH): $P_{\text{US}} = \usd 5$\\
+Current exchange rate:
+\[
+E_{\usd/\yen} = 0.0064
+\]
+
+\subsection*{(1) Does the Law of One Price hold? If not, where is the good cheaper?}
+The Law of One Price says the dollar price should satisfy
+\[
+P_{\text{US}} = P_{\text{JP}}\cdot E_{\usd/\yen}.
+\]
+Implied U.S.\ dollar price:
+\[
+P_{\text{JP}}\cdot E_{\usd/\yen}
+= (\yen 530)\left(0.0064\ \frac{\usd}{\yen}\right)
+= \usd 3.392.
+\]
+Since
+\[
+\usd 3.392 \neq \usd 5,
+\]
+the Law of One Price does not hold.
+
+Because $\usd 3.392 < \usd 5$, the meal is cheaper in Japan. The dollar price difference is
+\[
+\usd 5 - \usd 3.392 = \usd 1.608 \approx \usd 1.61.
+\]
+So the meal in Japan is about $\usd 1.61$ cheaper than in Oxford.
+
+\subsection*{(2) If Law of One Price holds in the long run (holding prices constant), what should the exchange rate be? Which currency should appreciate?}
+Assuming Law of One Price will hold in the long run with prices fixed, then
+\[
+E_{\usd/\yen}^{\text{PPP}}
+= \frac{P_{\text{US}}}{P_{\text{JP}}}
+= \frac{\usd 5}{\yen 530}
+= 0.00943396
+\approx 0.00943
+\]
+Compared to the current exchange rate:
+\[
+0.00943 > 0.0064.
+\]
+An increase in $E_{\usd/\yen}$ means the yen buys more dollars, i.e.\ the yen appreciates and the dollar depreciates in the long run.
+
+\subsection*{(3) Give one reason the Law of One Price might not hold here}
+One reason the Law of One Price may fail is that the final price includes local costs. For example, a McMuffin meal in Japan reflects Japanese wages and restaurant rent, which can differ a lot from Oxford. Since you cannot ship U.S.\ rent or U.S.\ labor to Japan and vice versa, these non-tradable costs can keep prices different even for the same item.
+
+\subsection*{(4) Does Law of One Price hold within the U.S.? Would Manhattan be higher or lower than Oxford? Why?}
+We expect the same meal in Manhattan is higher than in Oxford. Manhattan has higher commercial rents and higher wages which raise the local price of the meal even within the same country.
+
+% =========================================================
+% Part 2: Relative Purchasing Power Parity
+% =========================================================
+\section*{Part 2: Relative Purchasing Power Parity (Forecast End of 2026)}
+
+Current exchange rate:
+\[
+E_{\usd/\yen} = 0.0064
+\]
+$\pi_{\text{US}}$ is the expected 2026 U.S.\ inflation rate and $\pi_{\text{JP}}$ is the expected 2026 Japan inflation rate from the World Economic Outlook.
+
+\subsection*{Relative PPP Equation}
+\[
+\frac{1+\pi_{\text{US}}}{1+\pi_{\text{JP}}}
+=
+\frac{E_{\usd/\yen}^{\,\text{End-2026}}}{E_{\usd/\yen}}.
+\]
+So
+\[
+E_{\usd/\yen}^{\,\text{End-2026}}
+=
+E_{\usd/\yen}\left(\frac{1+\pi_{\text{US}}}{1+\pi_{\text{JP}}}\right).
+\]
+
+\subsection*{Forecast}
+\[
+\pi_{\text{US}} = 2.9\% = 0.029,
+\qquad
+\pi_{\text{JP}} = 2.1\% = 0.021
+\]
+Then:
+\[
+E_{\usd/\yen}^{\,\text{End-2026}}
+=
+0.0064\left(\frac{1+\pi_{\text{US}}}{1+\pi_{\text{JP}}}\right)
+=
+0.0064\left(\frac{1.029}{1.021}\right)
+=
+0.0064502
+\approx
+0.00645
+\]
+
+\subsection*{(1) Which currency appreciates?}
+Since
+\[
+\pi_{\text{US}} = 2.9\% > \pi_{\text{JP}} = 2.1\%,
+\]
+we have
+\[
+\frac{1+\pi_{\text{US}}}{1+\pi_{\text{JP}}}
+=
+\frac{1.029}{1.021}
+>
+1,
+\]
+so Relative PPP predicts
+\[
+E_{\usd/\yen}^{\,\text{End-2026}} > E_{\usd/\yen}.
+\]
+An increase in $E_{\usd/\yen}$ means the yen buys more dollars. Therefore, the yen is predicted to appreciate and the dollar to depreciate over 2026.
+
+\end{document}
