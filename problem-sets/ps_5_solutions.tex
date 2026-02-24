@@ -1,0 +1,175 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,graphicx,multicol,array,enumerate,textcomp}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc}
+
+\newcommand{\usd}{\text{\$}}
+
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]
+\leavevmode\par
+}{\end{trivlist}}
+
+\begin{document}
+
+\title{Problem Set 5:}
+\author{Joe White\\ECO 442}
+\date{\today}
+\maketitle
+
+% =========================================================
+\begin{problem}{1}
+
+\vspace{0.5em}
+\begin{enumerate}[(a)]
+\item \textbf{Decrease prices in Costa Rica in the long run. Should you raise or lower the money supply?}
+
+In the long run, money market equilibrium is
+\[
+MS_C = MD_C
+\quad\Longleftrightarrow\quad
+MS_C = P_C \cdot L(R_C, Y_C),
+\]
+or
+\[
+\frac{MS_C}{P_C} = L(R_C, Y_C).
+\]
+In the long run, $P_C$ can change, so a if we want lower prices $P_C$ in the long run, we need a lower nominal money supply:
+\[
+MS_C \downarrow \ \Rightarrow\ P_C \downarrow \quad
+\]
+
+\item \textbf{PPP for the col\'on/USD exchange rate. What happens when $P_C$ falls?}
+
+Absolute PPP implies
+\[
+E_{C/\usd} \;=\; \frac{P_C}{P_{\usd}}.
+\]
+Holding the U.S. price level $P_{\usd}$ fixed, a fall in Costa Rica's price level implies
+\[
+P_C \downarrow \ \Rightarrow\ E_{C/\usd} \downarrow.
+\]
+
+\[
+E_{C/\usd}\downarrow \quad\Longleftrightarrow\quad \text{the col\'on appreciates vs.\ the dollar}
+\]
+
+\item \textbf{Affordability for a Costa Rican consumer buying a car produced in Costa Rica (long run).}
+
+$MS_C\downarrow$, which in the long run implies $P_C\downarrow$
+
+\begin{enumerate}[(1)]
+\item \textbf{Price of the car in Costa Rica (in col\'ones):} Its nominal price moves with the price level in the long run, so
+\[
+P^{car}_C \downarrow \quad \text{(proportional to } P_C\downarrow\text{).}
+\]
+
+\item \textbf{Financing the Costa Rican consumer can receive:}
+In the long run, real interest rates are pinned down by real factors. However, lower long-run inflation implies lower nominal rates (Fisher effect). So nominal borrowing rates tend to be lower, but the real cost of borrowing is unchanged.
+
+\item \textbf{Nominal income of the Costa Rican consumer:}
+With money neutrality, nominal income tends to move proportionally with the price level:
+\[
+\text{Nominal income}_C \downarrow \quad \text{(roughly with } P_C\downarrow\text{).}
+\]
+
+\item \textbf{Real income of the Costa Rican consumer:}
+Real income is a real variable and is not changed by a permanent level shift in money in the long run:
+\[
+\text{Real income}_C \approx \frac{\text{Nominal income}_C}{P_C} \ \text{is unchanged.}
+\]
+\end{enumerate}
+
+The nominal price of the car falls, but nominal income also falls proportionally, leaving real purchasing power roughly unchanged. So in real terms, the affordability of a Costa Rican made car for a Costa Rican consumer is unchanged in the long run.
+
+\item \textbf{Affordability for a U.S. consumer buying a car produced in Costa Rica (long run).}
+
+\begin{enumerate}[(1)]
+\item \textbf{Price of the car in the U.S. (in dollars):}
+
+\[
+P^{car}_{\usd} = \frac{P^{car}_C}{E_{C/\usd}}.
+\]
+In the long run, $P^{car}_C$ falls with $P_C$, and $E_{C/\usd} = P_C/P_{\usd}$ also falls proportionally when $P_C$ falls.
+So the ratio is unchanged:
+\[
+\frac{P^{car}_C \downarrow}{E_{C/\usd}\downarrow} = \text{no change in } P^{car}_{\usd}.
+\]
+
+
+\item \textbf{Financing the U.S. consumer can receive:}
+This policy is in Costa Rica; in the long run it does not directly change U.S. real interest rates or U.S. credit conditions.
+
+\item \textbf{Nominal income of the U.S. consumer:} unchanged.
+
+\item \textbf{Real income of the U.S. consumer:} unchanged.
+\end{enumerate}
+
+\end{enumerate}
+\end{problem}
+
+% =========================================================
+\begin{problem}{2}
+
+\[
+g_{JP}=1\%, \quad g_{KR}=6\%, \qquad
+\mu_{JP}=4\%, \quad \mu_{KR}=7\%.
+\]
+
+\begin{enumerate}[(a)]
+\item \textbf{Inflation rate in each country.}
+
+Using the monetary model in growth rates:
+\[
+\pi = \mu - g.
+\]
+So
+\[
+\pi_{JP} = 4\% - 1\% = 3\%,
+\qquad
+\pi_{KR} = 7\% - 6\% = 1\%.
+\]
+
+\item \textbf{Which currency is depreciating and at what annual rate?}
+
+Let $E_{W/\yen}$ be the exchange rate in won per yen. Then
+\[
+\%\Delta E_{W/\yen} = \pi_{KR} - \pi_{JP} = 1\% - 3\% = -2\%.
+\]
+So $E_{W/\yen}$ falls by $2\%$ per year, meaning:
+\[
+E_{W/\yen}\downarrow \ \Rightarrow\ \text{the won appreciates and the yen depreciates at } 2\%\text{/year.}
+\]
+
+\item \textbf{Korea wants inflation fixed at 2\% per year. What money growth should they target?
+Then explain effects on (i) real rates, (ii) nominal rates, (iii) the won/yen exchange rate (long run).}
+
+Target $\pi_{KR}=2\%$ and keep $g_{KR}=6\%$. From $\pi=\mu-g$:
+\[
+2\% = \mu_{KR} - 6\%
+\quad\Longrightarrow\quad
+\mu_{KR} = 8\%.
+\]
+So the Bank of Korea should raise money growth from $7\%$ to $8\%$.
+
+\begin{enumerate}[(i)]
+\item \textbf{Real interest rates in Korea:} In the long run, real interest rates are determined by real factors and do not change systematically with a change in long-run inflation. So real rates are unchanged.
+
+\item \textbf{Nominal interest rates in Korea:} By the Fisher effect, nominal rates move one-for-one with inflation in the long run. Inflation rises from $1\%$ to $2\%$, so nominal interest rates rise by about $1$ percentage point.
+
+\item \textbf{Exchange rate between the won and yen (long run):}
+Japan stays at $\pi_{JP}=3\%$. Korea becomes $\pi_{KR}=2\%$. Relative PPP implies
+\[
+\%\Delta E_{W/\yen} = \pi_{KR} - \pi_{JP} = 2\% - 3\% = -1\%.
+\]
+So the won still appreciates (and the yen still depreciates), but now only at 1\% per year instead of 2\% per year.
+\end{enumerate}
+
+\end{enumerate}
+\end{problem}
+
+\end{document}
