@@ -1,0 +1,168 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb, graphicx, multicol, array, enumerate, textcomp}
+
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]
+\leavevmode\par
+}{\end{trivlist}}
+
+\newcommand{\usd}{\text{\$}}
+\newcommand{\eur}{\text{e}}
+
+\begin{document}
+
+\title{Problem Set 4}
+\author{Joe White\\ ECO 442}
+\maketitle
+
+% =========================================================
+% Problem 1
+% =========================================================
+\begin{problem}{1}
+\[
+P_{\text{BR}} = 2000~\text{BRD},\qquad
+P_{\text{MX}} = 5~\text{MEP},\qquad
+P_{\text{AR}} = 1.5~\text{ARP},
+\]
+\[
+E_{\text{BRD/MEP}} = 400,\qquad E_{\text{BRD/ARP}} = 2000.
+\]
+Absolute PPP:
+\[
+E_{\text{home/foreign}}=\frac{P_{\text{home}}}{P_{\text{foreign}}}.
+\]
+
+\begin{enumerate}[(a)]
+  \item \textbf{Does PPP hold?}
+
+  \[
+  E_{\text{BRD/MEP}}
+  =\frac{P_{\text{BR}}}{P_{\text{MX}}}
+  =\frac{2000}{5}
+  =400,
+  \]
+  which equals the spot rate, so Absolute PPP holds for $E_{\text{BRD/MEP}}$.
+
+  \[
+  E_{\text{BRD/ARP}}
+  =\frac{P_{\text{BR}}}{P_{\text{AR}}}
+  =\frac{2000}{1.5}
+  =1333.\overline{3},
+  \]
+  which does not match the spot rate $2000$, so Absolute PPP does not hold for $E_{\text{BRD/ARP}}$.
+
+  \item \textbf{Cost of living in Brazil relative to Mexico and Argentina.}
+
+  Convert foreign coconut prices into BRD:
+  \[
+  P_{\text{MX in BRD}}
+  = P_{\text{MX}}\cdot E_{\text{BRD/MEP}}
+  = 5\cdot 400
+  =2000~\text{BRD},
+  \]
+  \[
+  P_{\text{AR in BRD}}
+  = P_{\text{AR}}\cdot E_{\text{BRD/ARP}}
+  = 1.5\cdot 2000
+  =3000~\text{BRD}.
+  \]
+  The coconut costs the same in Brazil and Mexico (2000 BRD), but is more expensive in Argentina (3000 BRD). Therefore, the cost of living is the same in Brazil and Mexico, and lower in Brazil than in Argentina.
+
+  \item \textbf{Unadjusted vs PPP-adjusted GDP per-capita for Mexico.}
+
+  Brazil GDP per-capita: $20{,}000$ BRD. Mexico GDP per-capita: $75$ MEP.
+
+  Unadjusted:
+  \[
+  \text{GDPPC}_{\text{MX}}^{\text{unadj}}(\text{BRD})
+  = (75~\text{MEP})\cdot E_{\text{BRD/MEP}}
+  = 75\cdot 400
+  = 30{,}000~\text{BRD}.
+  \]
+
+  PPP-adjusted: since Absolute PPP holds between BRD and MEP, the PPP-implied rate equals the spot rate here, so the PPP-adjusted conversion is the same:
+  \[
+  \text{GDPPC}_{\text{MX}}^{\text{PPP}}(\text{BRD})
+  = (75~\text{MEP})\cdot E_{\text{BRD/MEP}}
+  = 30{,}000~\text{BRD}.
+  \]
+
+  \item \textbf{Relative PPP}
+
+  Relative PPP:
+  \[
+  \frac{1+\pi_{\text{home}}}{1+\pi_{\text{foreign}}}
+  =\frac{E_{\text{home/foreign}}^{1YR}}{E_{\text{home/foreign}}}.
+  \]
+  Given expected inflation:
+  \[
+  \pi_{\text{BR}}=100\%=1,\qquad
+  \pi_{\text{MX}}=12\%=0.12,\qquad
+  \pi_{\text{AR}}=25\%=0.25.
+  \]
+
+  \emph{BRD/MEP:}
+  \[
+  E_{\text{BRD/MEP}}^{1YR}
+  = E_{\text{BRD/MEP}}
+    \left(\frac{1+\pi_{\text{BR}}}{1+\pi_{\text{MX}}}\right)
+  = 400\left(\frac{2.00}{1.12}\right)
+  = 714.29~\text{BRD/MEP}.
+  \]
+
+  \emph{BRD/ARP:}
+  \[
+  E_{\text{BRD/ARP}}^{1YR}
+  = E_{\text{BRD/ARP}}
+    \left(\frac{1+\pi_{\text{BR}}}{1+\pi_{\text{AR}}}\right)
+  = 2000\left(\frac{2.00}{1.25}\right)
+  = 3200~\text{BRD/ARP}.
+  \]
+\end{enumerate}
+\end{problem}
+
+% =========================================================
+% Problem 2
+% =========================================================
+\begin{problem}{2}
+
+\[
+E_{\text{BRD/}\text{\texteuro}}=1.95,\qquad
+F_{\text{BRD/}\text{\texteuro}}^{1YR}=2.29,
+\qquad
+\pi_{\text{\texteuro}}=2.6\%=0.026.
+\]
+Relative PPP:
+\[
+\frac{1+\pi_{\text{BR}}}{1+\pi_{\text{\texteuro}}}
+=\frac{E_{\text{BRD/}\text{\texteuro}}^{1YR}}{E_{\text{BRD/}\text{\texteuro}}}.
+\]
+
+\begin{enumerate}[(a)]
+  \item Since the forward rate is above the spot rate,
+  \[
+  F_{\text{BRD/}\text{\texteuro}}^{1YR} > E_{\text{BRD/}\text{\texteuro}},
+  \]
+  the BRD is expected to depreciate against the euro. Under Relative PPP, this corresponds to a higher expected inflation rate in Brazil than in the euro area.
+
+  \item Approximate the expected future spot rate with the one-year forward rate:
+  \[
+  E_{\text{BRD/}\text{\texteuro}}^{1YR}\approx F_{\text{BRD/}\text{\texteuro}}^{1YR}=2.29.
+  \]
+  Then
+  \[
+  1+\pi_{\text{BR}}
+  =(1+\pi_{\text{\texteuro}})\frac{E_{\text{BRD/}\text{\texteuro}}^{1YR}}{E_{\text{BRD/}\text{\texteuro}}}
+  = (1.026)\left(\frac{2.29}{1.95}\right)
+  = 1.20489,
+  \]
+  so
+  \[
+  \pi_{\text{BR}} \approx 0.2049 \approx 20.5\%.
+  \]
+\end{enumerate}
+\end{problem}
+
+\end{document}
